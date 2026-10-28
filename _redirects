@@ -1,0 +1,12 @@
+# Legacy pages from the original site → new material pages (permanent)
+/index.html                  /                              301
+/glossy-wood.html            /material/glossy-wood          301
+/vertical-wood-stripe.html   /material/vertical-wood-stripe 301
+/multi-ceramic.html          /material/multi-ceramic        301
+/open-pore-travertine.html   /material/open-pore-travertine 301
+/vertical-wood.html          /material/vertical-wood        301
+/noble-oak.html              /material/noble-oak            301
+
+# Single-page app: every other path renders index.html, so refreshing
+# /material/… or /material/…/applications/3 works.
+/*                           /index.html                    200

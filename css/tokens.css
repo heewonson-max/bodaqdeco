@@ -1,0 +1,79 @@
+/* ==========================================================================
+   DESIGN TOKENS — Bodaq Deco digital showroom
+   Every colour, size, space and duration used by the site comes from here.
+   ========================================================================== */
+:root {
+  /* — Palette — */
+  --canvas-ivory: #F2F0EA;
+  --warm-white:   #FAF9F5;
+  --stone-beige:  #D8D0C3;
+  --oatmeal:      #BEB3A2;
+  --warm-greige:  #91877A;
+  --deep-taupe:   #62574D;
+  --dark-umber:   #302923;
+  --charcoal:     #242321;
+  --bronze:       #8C6B4B;     /* accent: selection, focus, active rule */
+  --bronze-light: #C2A07C;     /* accent on dark grounds */
+  --divider:      rgba(48, 41, 35, 0.22);
+  --divider-soft: rgba(48, 41, 35, 0.12);
+  --divider-dark: rgba(250, 249, 245, 0.18);
+
+  /* Text on light grounds */
+  --ink:        var(--dark-umber);
+  --ink-2:      var(--deep-taupe);
+  --ink-3:      #7A6F63;      /* 4.6:1 on ivory — smallest captions */
+  /* Text on dark grounds */
+  --paper:      var(--warm-white);
+  --paper-2:    rgba(250, 249, 245, 0.72);
+  --paper-3:    rgba(250, 249, 245, 0.56);
+
+  /* — Type — */
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+               "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --fs-display: clamp(3.25rem, 9.4vw, 10.5rem);   /* hero headline */
+  --fs-h1:      clamp(2.375rem, 5vw, 5.25rem);     /* material name */
+  --fs-h2:      clamp(1.875rem, 3.4vw, 3.5rem);    /* section titles */
+  --fs-h3:      clamp(1.125rem, 1.4vw, 1.375rem);
+  --fs-body:    0.9375rem;                         /* 15px */
+  --fs-small:   0.8125rem;                         /* 13px */
+  --fs-label:   0.6875rem;                         /* 11px caps label */
+  --fs-code:    0.75rem;                           /* 12px mono */
+
+  --tr-label:   0.16em;
+  --tr-caps:    0.06em;
+  --tr-tight:  -0.035em;
+
+  /* — Space (8px system) — */
+  --s-1: 8px;  --s-2: 16px; --s-3: 24px; --s-4: 32px;
+  --s-6: 48px; --s-8: 64px; --s-12: 96px; --s-16: 128px;
+  --gutter:  clamp(20px, 5.6vw, 112px);
+  --col-gap: clamp(16px, 1.8vw, 32px);
+  --section: clamp(64px, 9vw, 160px);
+  --header-h: 72px;
+
+  /* — Motion — */
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-press:  140ms;
+  --dur-hover:  220ms;
+  --dur-image:  560ms;
+  --dur-reveal: 640ms;
+  --dur-hero:   1600ms;
+
+  --z-header: 50;
+  --z-menu:   80;
+}
+
+@media (max-width: 767px) {
+  :root { --header-h: 60px; --fs-display: clamp(3.25rem, 16.5vw, 5.5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-press: 0ms; --dur-hover: 0ms; --dur-image: 0ms;
+    --dur-reveal: 0ms; --dur-hero: 0ms;
+  }
+}
